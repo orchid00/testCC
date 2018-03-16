@@ -1,4 +1,4 @@
-# This a test for github pages
+# This a test and proof of concept
 ## By Paula Andrea Martinez
 
 ### Exposure to the coding club
