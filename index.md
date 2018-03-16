@@ -58,20 +58,20 @@ Here is a summary of what what I've learned and some recommendations.
  
   * To clean names
   
-        nams <- colnames(LPDdata_Feb2016)  %>%
+        `nams <- colnames(LPDdata_Feb2016)  %>%
         tolower %>%  # change caps for lower
-        str_replace_all("[.]", "_")  # change dots for underscores
+        str_replace_all("[.]", "_")  # change dots for underscores`
 
   * Clean data inside
   
-        LPDdata_Feb2016_cleaned <- LPDdata_Feb2016 %>%
+        `LPDdata_Feb2016_cleaned <- LPDdata_Feb2016 %>%
         mutate_all(~str_replace_all(., "/n", "")) %>%  # clean extra lines
         mutate_all(str_trim) %>%  # clean any extra spaces
-        mutate_all(~str_replace_all(., "��", "-")) # arbitrary change for strange char
+        mutate_all(~str_replace_all(., "��", "-")) # arbitrary change for strange char`
   
-  * group_by
+  * `group_by`
   I've learned that after summarise only the last grouped is drop. Unlike what I was thinking that all the groups are drop. You can read more about it [here](https://github.com/tidyverse/dplyr/issues/2963){:target="_blank"}
-  * do
+  * `do`
   I've learned recently that do is deprecated from [twitter Mike FC](https://twitter.com/coolbutuseless/status/969853912990720005), that is still an on going and fun discussion, but in trying to understand the options I found very nice tutorial of group_by + nest + mutate + map from Jenny Brian, highly recommended [Split-Apply-Combine](http://stat545.com/block024_group-nest-split-map.html){:target="_blank"}. My version of the forest_slopes can be found in the [report](https://orchid00.github.io/testCC/tidyverse_report.html){:target="_blank"}
   
 
