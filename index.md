@@ -57,10 +57,10 @@ Here is a summary of what what I've learned and some recommendations.
 10. A few **updated** pieces of code to look for
   * To clean names
   
-         nams <-
-         colnames(LPDdata_Feb2016)  %>%
-         tolower %>%  # change caps for lower
-         str_replace_all("[.]", "_")  # change dots for underscores
+        nams <-
+        colnames(LPDdata_Feb2016)  %>%
+        tolower %>%  # change caps for lower
+        str_replace_all("[.]", "_")  # change dots for underscores
 
   * Clean data inside
   
