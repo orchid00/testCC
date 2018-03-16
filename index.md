@@ -55,6 +55,7 @@ Here is a summary of what what I've learned and some recommendations.
  8. From the tutorial we needed to install ggMargins again from the github repo, this because it seemed to have a change which was not showing our shaded area. Use this: devtools::install_github("daattali/ggExtra"). I've also learned that this is the preferred way to do it to have the latest changes of a package.
  9. Oh, related to that, I've learned that if you need updates for R you have to install R the manual way (download and install), but there is an option in RStudio, help, Check for updates. It might update it for you or it might just let you know that you need to update.
  10. A few **updated** pieces of code to look for
+ 
   * To clean names
   
         nams <- colnames(LPDdata_Feb2016)  %>%
