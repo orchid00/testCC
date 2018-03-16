@@ -1,64 +1,35 @@
-# Tutorial name
-## Author
+# This a test for github pages
+## By Paula Andrea Martinez
 
-### Tutorial Aims
+### Exposure to the coding club
 
-#### <a href="#section1"> 1. Import data in R</a>
+Last updated on March 16th, 2018
 
-#### <a href="#section2"> 2. Create a plot</a>
+#### Tutorial Aims:
 
-#### <a href="#section3"> 3. Save the plot</a>
+1. Create a coding tutorial and host it on GitHub
+2. Set up version control with GitHub and RStudio 
+3. Analyse and visualise data using the tidyverse 
+4. Create a reproducible report using R Markdown 
 
-### You can get all of the resources for this tutorial from <a href="https://github.com/ourcodingclub/CC-EAB-tut-ideas" target="_blank">this GitHub repository</a>. Clone and download the repo as a zip file, then unzip it.
+You can get all of the resources for this tutorial from [this GitHub repository](https://ourcodingclub.github.io/2018/03/06/tidyverse.html){:target="_blank"}. Clone and download the repo as a zip file, then unzip it.
 
-<a name="section1"></a>
+## 1. Create a coding tutorial and host it on GitHub
 
-## 1. Import data in R
+I created this GitHub page and used the Architec theme 
 
-Open `RStudio`, create a new script by clicking on `File/ New File/ R Script` set the working directory and load the packages we'll need.
+## 2. Set up version control with GitHub and RStudio 
 
-```r
-# Set the working directory
-setwd("your_filepath")
+Done this in my PC
 
-# Load packages
-library(ggplot2)
-library(dplyr)
-```
+## 3. Analyse and visualise data using the tidyverse
 
-<a name="section2"></a>
+Done parts 1, 2 and 3 from the reference link
 
-## 2. Create a plot
+## 4. Create a reproducible report using R Markdown 
 
-You can add more text and code, e.g.
+Have a look at part one of the tutorial [https://orchid00.github.io/testCC/tidyverse_report.html](https://orchid00.github.io/testCC/tidyverse_report.html){:target="_blank"}
 
-```r
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = class))
-```
+This is the end of the tutorial. Here is a summary of what what I've learned:
 
-<a name="section3"></a>
 
-## 3. The third section
-
-Here you can add some more text if you wish.
-
-```r
-ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
-  geom_point(mapping = aes(color = class)) + 
-  geom_smooth()
-```
-
-At this point it would be a good idea to include an image of what the plot is meant to look like so people can check they've done it right. Replace `IMAGE_NAME.png` with your own image file:
-
-<center> <img src="{{ site.baseurl }}/fig/trait_correlation.png" alt="Img" style="width: 600px;"/> </center>
-
-This is the end of the tutorial. Here is a summary of what we learned:
-
-##### - something
-##### - something else
-##### - and a third thing
-
-We can also provide some useful links:
-
-For more on `ggplot2`, read the official <a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" target="_blank">ggplot2 cheatsheet</a>.
