@@ -47,7 +47,7 @@ Here is a summary of what what I've learned and some recommendations.
   * fig (for all figures)
   * RData (this project uses RData, you might as well have a data folder for raw data)
   * scripts (where your R code lives)
-You can have other folders too, but I consider that the basics.
+  * You can have other folders too, but I consider those the basics.
 4. Have a setup script to check and install all your packages 
 5. We will be using a theme for the figures, I will have this in a separate script.
 6. I followed the cleaning steps, and updated things slightly, as can be seen in my report (next step).
@@ -56,17 +56,19 @@ You can have other folders too, but I consider that the basics.
 9. Oh, related to that, I've learned that if you need updates for R you have to install R the manual way (download and install), but there is an option in RStudio, help, Check for updates. It might update it for you or it might just let you know that you need to update.
 10. A few **updated** pieces of code to look for
   * To clean names
-  `nams <-
-  colnames(LPDdata_Feb2016)  %>%
-  tolower %>%  # change caps for lower
-  str_replace_all("[.]", "_")  # change dots for underscores
-  `
+  
+         nams <-
+         colnames(LPDdata_Feb2016)  %>%
+         tolower %>%  # change caps for lower
+         str_replace_all("[.]", "_")  # change dots for underscores
+
   * Clean data inside
-  `LPDdata_Feb2016_cleaned <- LPDdata_Feb2016 %>%
-  mutate_all(~str_replace_all(., "/n", "")) %>%  # clean extra lines
-  mutate_all(str_trim) %>%  # clean any extra spaces
-  mutate_all(~str_replace_all(., "��", "-")) # arbitrary change for strange char
-  `
+  
+        LPDdata_Feb2016_cleaned <- LPDdata_Feb2016 %>%
+        mutate_all(~str_replace_all(., "/n", "")) %>%  # clean extra lines
+        mutate_all(str_trim) %>%  # clean any extra spaces
+        mutate_all(~str_replace_all(., "��", "-")) # arbitrary change for strange char
+  
   * group_by
   I've learned that after summarise only the last grouped is drop. Unlike what I was thinking that all the groups are drop. You can read more about it [here](https://github.com/tidyverse/dplyr/issues/2963){:target="_blank"}
   * do
